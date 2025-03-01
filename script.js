@@ -1,6 +1,12 @@
-function volume_sphere() {
-    //Write your code here
-  
-} 
+function volumeSphere() {
+    const radiusInput = document.getElementById("radius");
+    const radius = parseFloat(radiusInput.value);
 
-window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+    if (isNaN(radius) || radius < 0) {
+        document.getElementById("volume").innerText = "NaN";
+        return;
+    }
+
+    const volume = (4/3) * Math.PI * Math.pow(radius, 3);
+    document.getElementById("volume").innerText = volume.toFixed(4);
+}
