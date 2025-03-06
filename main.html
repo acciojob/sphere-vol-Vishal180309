@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Volume of a Sphere</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-top: 30px;
+        }
+        label, input {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <h1>Volume of a Sphere</h1>
-    <form>
+    <p>Input radius value and get the volume of a sphere.</p>
+    <form action="" method="post" id="MyForm">
         <label for="radius">Radius</label>
-        <input type="text" id="Radius" name="Radius">
-		<label for="Volume">Volume</label>
-        <input type="text" id="Volume" name="Volume">
-        <button type="button" onclick="volumeSphere()">Calculate</button>
-        
+        <input type="text" name="radius" id="radius" required>
+        <label for="volume">Volume</label>
+        <input type="text" name="volume" id="volume">
+        <input type="submit" value="Calculate" id="submit">
     </form>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
